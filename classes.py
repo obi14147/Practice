@@ -11,14 +11,6 @@ class Kotatko:
     def snez(self, jidlo):
         print("{}: Mnau mnau! {} mi chutna!".format(self.jmeno, jidlo))
 
-mourek = Kotatko(jmeno = 'Mourek')
-mourek.snez('ryba')
-micka = Kotatko(jmeno = 'Micka')
-mourek.zamnoukej()
-micka.zamnoukej()
-print(mourek)
-print(micka)
-
 class Kocka:
     def __init__(self):
         self.pocet_zivotu = 9
@@ -45,6 +37,24 @@ class Kocka:
         else:
             print("Kocka se krmi.")
 
+class Stenatko:
+    def __init__(self, jmeno):
+        self.jmeno = jmeno
+
+    def snez(self, jidlo):
+        print("{}: {} mi chutna!".format(self.jmeno, jidlo))
+
+    def zastekej(self):
+        print(" Haf!".format(self.jmeno))
+
+mourek = Kotatko('Mourek')
+mourek.snez('ryba')
+micka = Kotatko('Micka')
+mourek.zamnoukej()
+micka.zamnoukej()
 mikes = Kocka()
 mikes.zamnoukej()
 mikes.snez('mys')
+azor = Stenatko('Azor')
+azor.zastekej()
+azor.snez('kost')
